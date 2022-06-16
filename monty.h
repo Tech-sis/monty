@@ -18,6 +18,17 @@
 #define MONTY_ERROR_PINT_EMPTY 4
 #define MONTY_ERROR_POP_EMPTY 5
 
+/**
+ * struct monty_s - doubly link representation of monty
+ *
+ * @save_ptr: save pointer
+ * @line: line number
+ * @token: token
+ * @mode: mode
+ * @error: error message
+ *
+ *  Description: monty code structure
+ */
 typedef struct monty_s
 {
 	char *save_ptr;

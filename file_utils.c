@@ -18,19 +18,14 @@ line_t *textfile_to_array(const char *filename)
 
 	if (filename == NULL)
 		return (0);
-
 	file = fopen(filename, "r");
-
 	if (file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", filename);
 		exit(EXIT_FAILURE);
 	}
-
 	lineBuffer = NULL;
-
 	lines = NULL;
-
 	while (getline(&lineBuffer, &size, file) != -1)
 	{
 
@@ -41,13 +36,11 @@ line_t *textfile_to_array(const char *filename)
 			return (0);
 		}
 		lines = tmp;
-
 		(lines + lineNumber)->content = strdup(lineBuffer);
 		(lines + lineNumber)->number = lineNumber;
 		lineNumber++;
 		tmp = lines;
 	}
-
 	free(lineBuffer);
 	(lines + lineNumber)->content = NULL;
 	fclose(file);

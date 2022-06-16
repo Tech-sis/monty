@@ -99,12 +99,13 @@ void op_pchar(stack_t **stack, unsigned int line_number)
 
 	temp = *stack;
 	val = temp->n;
-	if (!isprint(val))
+	if (val >= 0 && val <= 127)
+	{
+		printf("%c\n", val);
+	}
+	else
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-
-	putchar(val);
-	putchar('\n');
 }

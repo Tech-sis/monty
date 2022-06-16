@@ -1,5 +1,6 @@
 #ifndef _MONTY_
 #define _MONTY_
+#define _GNU_SOURCE
 
 /* Constants */
 #define SUCSS_OP 0

@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 			}
 
 			op_param = strtok(NULL, "\t\n ");
-			op_status = handle_exxecution(op_code, op_param, line_num, op_status);
+			op_status = handle_execution(op_code, op_param, line_num, op_status);
 
 			if (op_status >= 100 && op_status < 300)
 			{

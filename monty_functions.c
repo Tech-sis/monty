@@ -78,3 +78,33 @@ void op_pint(stack_t **stack, unsigned int line_number)
 	temp = *stack;
 	printf("%d\n", temp->n);
 }
+
+/**
+ * op_pchar - prints the char at the top of the stack
+ *
+ * @stack: pointer to the head node pointer
+ * @line_number:  the line number
+ */
+void op_pchar(stack_t **stack, unsigned int line_number)
+{
+	stack_t *temp;
+	int val;
+
+	(void)line_number;
+	if (*stack == NULL)
+	{
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	temp = *stack;
+	val = temp->n;
+	if (!isprint(val))
+	{
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	putchar(val);
+	putchar('\n');
+}

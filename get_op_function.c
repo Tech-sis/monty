@@ -15,6 +15,20 @@ void (*get_op_func(char *s))(stack_t **, unsigned int)
 		{"push", op_push},
 		{"pall", op_pall},
 		{"pint", op_pint}, /*Add new functions on here*/
+		{"pop", op_pop},
+		{"swap", op_swap},
+		{"pchar", op_pchar},
+		{"add", op_add},
+		{"sub", op_sub},
+		{"mul", op_mul},
+		{"div", op_div},
+		{"mod", op_mod},
+		{"nop", op_nop},
+		{"rotl", op_rotl},
+		{"rotr", op_rotr},
+		{"pstr", op_pstr},
+		{"stack", op_stack},
+		{"queue", op_queue},
 		{NULL, NULL}};
 	int i = 0;
 

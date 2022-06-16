@@ -4,8 +4,8 @@ stack_t *head = NULL;
 
 /**
  * main - The Monty Interpreter entry point
- * @argn: The args number
- * @args: The args passed to the interpreter
+ * @argc: The args number
+ * @argv: The args passed to the interpreter
  *
  * Return: Always zero
  */

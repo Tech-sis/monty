@@ -16,13 +16,13 @@ void mod(stack_t **stack, unsigned int line_number)
 	length = count_stack(*stack);
 
 	if (length < 2)
-		handle_error(ERRR_DIV_ZRO, NULL, line_number, NULL);
-	
+		handle_error(ERR_DIV_ZRO, NULL, line_number, NULL);
+
 	a = temp->n;
 
 	if (a == 0)
-		handle_error(ERRR_DIV_ZRO, NULL, line_number, NULL);
-	
+		handle_error(ERR_DIV_ZRO, NULL, line_number, NULL);
+
 	b = temp->next->n;
 	temp->next->n = b % a;
 	*stack = temp->next;
